@@ -1,4 +1,6 @@
 {
   "itemGroup.testmod": "Test Mod Items",
-  "item.testmod.sbzdy": "SBZDY"
+  "item.testmod.sbzdy": "SBZDY",
+  "item.testmod.icon": "icon",
+  "item.testmod.STHTOEAT": "SBXTQ"
 }
