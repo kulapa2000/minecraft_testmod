@@ -26,8 +26,9 @@ import java.util.List;
 public class Teleport extends Item {
     public Teleport(Properties properties)
     {
-        super(properties);
+        super(properties.durability(10));
     }
+
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand)
@@ -38,6 +39,10 @@ public class Teleport extends Item {
         player.getCooldowns().addCooldown(this,60);
         player.fallDistance=0F;
         world.playSound(player,player.getX(),player.getY(),player.getZ(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS,1.0F,1.0F);
+
+        ItemStack stack =player.getItemInHand(hand);
+        stack.setDamageValue(stack.getDamageValue()+1);
+        if(stack.getDamageValue()>=stack.getMaxDamage()){stack.setCount(0);}
         return super.use(world,player,hand);
     }
     protected static BlockHitResult rayTrace(Level world, Player player, ClipContext.Fluid fluidMode) {
