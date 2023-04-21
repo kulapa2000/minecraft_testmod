@@ -1,5 +1,6 @@
 package com.hhc.testmod;
 
+import com.hhc.testmod.init.BlockInit;
 import com.hhc.testmod.init.ItemInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
@@ -33,7 +34,7 @@ public class TestModMain
 
         modEventBus.addListener(this::setup);
         ItemInit.ITEMS.register(modEventBus);
-
+        BlockInit.BLOCKS.register(modEventBus);
 
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
