@@ -3,5 +3,6 @@
   "item.testmod.sbzdy": "SBZDY",
   "item.testmod.icon": "icon",
   "item.testmod.STHTOEAT": "SBXTQ",
-  "block.testmod.first_block": "First Block"
+  "block.testmod.first_block": "First Block",
+  "block.testmod.ad_block": "XTQ_explosion"
 }

@@ -1,6 +1,7 @@
 package com.hhc.testmod.init;
 
 import com.hhc.testmod.TestModMain;
+import com.hhc.testmod.blocks.AdBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +23,8 @@ public class BlockInit {
     public static final RegistryObject<Block> FIRST_BLOCK=BLOCKS.register("first_block",
             ()->new Block(Block.Properties.of(Material.STONE).strength(4f,1200f).requiresCorrectToolForDrops().lightLevel((state)->15)));
 
+    public static final RegistryObject<Block> AD_BLOCK=BLOCKS.register("ad_block",
+            ()->new AdBlock(Block.Properties.copy(BlockInit.FIRST_BLOCK.get())));
 
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event){
