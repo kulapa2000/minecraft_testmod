@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "testmod:block/ad_block",
+    "mydirection=east": {
+      "model": "testmod:block/rotate_block",
       "y": 90
     },
-    "facing=north": {
-      "model": "testmod:block/ad_block"
+    "mydirection=north": {
+      "model": "testmod:block/rotate_block"
     },
-    "facing=south": {
-      "model": "testmod:block/ad_block",
+    "mydirection=south": {
+      "model": "testmod:block/rotate_block",
       "y": 180
     },
-    "facing=west": {
-      "model": "testmod:block/ad_block",
+    "mydirection=west": {
+      "model": "testmod:block/rotate_block",
       "y": 270
+    },
+    "mydirection=up": {
+      "model": "testmod:block/rotate_block",
+      "x": 90
+    },
+    "mydirection=down": {
+      "model": "testmod:block/rotate_block",
+      "x": 270
     }
-}
+  }
 }
