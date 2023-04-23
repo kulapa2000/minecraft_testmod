@@ -2,6 +2,7 @@ package com.hhc.testmod.init;
 
 import com.hhc.testmod.TestModMain;
 import com.hhc.testmod.blocks.AdBlock;
+import com.hhc.testmod.blocks.RotateBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -25,6 +26,9 @@ public class BlockInit {
 
     public static final RegistryObject<Block> AD_BLOCK=BLOCKS.register("ad_block",
             ()->new AdBlock(Block.Properties.copy(BlockInit.FIRST_BLOCK.get())));
+
+    public static final RegistryObject<Block> ROTATE_BLOCK=BLOCKS.register("rotate_block",
+            ()->new RotateBlock(Block.Properties.copy(Blocks.STONE)));
 
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event){
