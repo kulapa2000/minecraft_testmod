@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "mydirection=east": {
+      "model": "testmod:block/rotate_block",
+      "y": 90
+    },
+    "mydirection=north": {
+      "model": "testmod:block/rotate_block"
+    },
+    "mydirection=south": {
+      "model": "testmod:block/rotate_block",
+      "y": 180
+    },
+    "mydirection=west": {
+      "model": "testmod:block/rotate_block",
+      "y": 270
+    },
+    "mydirection=up": {
+      "model": "testmod:block/rotate_block",
+      "x": 90
+    },
+    "mydirection=down": {
+      "model": "testmod:block/rotate_block",
+      "x": 270
+    }
+  }
+}
