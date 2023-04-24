@@ -21,8 +21,11 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class AdBlock extends Block {
+
+    private static final Logger LOGGER = Logger.getLogger(AdBlock.class.getName());
     public AdBlock(Block.Properties properties){
         super(properties.explosionResistance(0F));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -36,6 +39,7 @@ public class AdBlock extends Block {
         if(!world.isClientSide()&&held.getItem()== Items.GUNPOWDER){
             world.explode(player,pos.getX(),pos.getY(),pos.getZ(),4.0F,true, Explosion.BlockInteraction.DESTROY);
             held.shrink(1);
+            LOGGER.info("explosion happened");
             return InteractionResult.CONSUME;
         }
         return super.use(state,world,pos,player,hand,hit);
