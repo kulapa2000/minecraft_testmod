@@ -1,5 +1,6 @@
 package com.hhc.testmod;
 
+import com.hhc.testmod.blockEntity.ModBlockEntities;
 import com.hhc.testmod.init.BlockInit;
 import com.hhc.testmod.init.ItemInit;
 import com.mojang.logging.LogUtils;
@@ -35,6 +36,7 @@ public class TestModMain
         modEventBus.addListener(this::setup);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
